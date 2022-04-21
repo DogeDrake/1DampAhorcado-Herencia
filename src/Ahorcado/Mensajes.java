@@ -25,17 +25,19 @@ public class Mensajes {
 	 */
 	public char pedir_letra() {
 		// IMPLEMENTAR
-		char palabra = 0;
-		char letra;
+		String palabra;
+		char letra = 0;
 		System.out.print("Introducza una leta: ");
 		try {
-			palabra = (char) in.read();
+			palabra = in.readLine();
+			letra = palabra.charAt(0);
+			letra = Character.toUpperCase(letra);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return palabra;
+		return letra;
 	}
 
 	/**

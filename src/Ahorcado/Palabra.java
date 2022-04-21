@@ -32,7 +32,7 @@ public class Palabra {
 	 */
 	public boolean esta_adivinada() {
 		// IMPLEMENTAR
-		if (p_oculta.equals(p_visible)) {
+		if (p_oculta.equals(String.valueOf(p_visible))) {
 			return true;
 		} else {
 			return false;
@@ -63,6 +63,7 @@ public class Palabra {
 	public int buscar(char c) {
 		// IMPLEMENTAR
 		char caroculto;
+		Character.toUpperCase(c);
 		int x = 0;
 		for (int i = 0; i < p_oculta.length(); i++) {
 			caroculto = p_oculta.charAt(i);
