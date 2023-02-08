@@ -49,14 +49,14 @@ public class Marcador {
 	 */
 	private void mostrarAciertoyFallos() {
 		// IMPLEMENTAR
-		if (listaAciertos.size() > 0) {
+		if (numAciertos > 0) {
 			System.out.println("-> Letras acertadas: ");
 			for (Character character : listaAciertos) {
 				System.out.print(character);
 			}
 			System.out.println("");
 		}
-		if (listaFallos.size() > 0) {
+		if (numFallos > 0) {
 			System.out.println("-> Letras falladas: ");
 			for (Character character : listaFallos) {
 				System.out.print(character);
@@ -79,6 +79,7 @@ public class Marcador {
 		System.out.println("*****************************************");
 		System.out.println("-> Intentos restantes = " + intentos);
 		System.out.println("-> PUNTOS = " + puntos);
+		mostrarAciertoyFallos();
 	}
 
 	/**
